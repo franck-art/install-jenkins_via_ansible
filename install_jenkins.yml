@@ -34,14 +34,14 @@
       state: installed
 
   
-  - name: Using curl to install jenkins repo
-    shell: curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+  - name: Using wget to install jenkins repo
+    shell: wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
     args:
       warn: no
 
   - name: install jenkins packages
     
-    shell: rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key 
+    shell: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key 
     args:
       warn: no
 
