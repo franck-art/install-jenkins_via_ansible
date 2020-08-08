@@ -5,19 +5,21 @@ NB: If you have ansible installed and you are directly connected to your machine
 
 In my case, I use the ansible stack
 
-1-load the Ansible Stack thanks to AWS Cloud training service 
+1. load the Ansible Stack thanks to AWS Cloud training service 
 
-2- connect via Mobaxterm or putty (for a remote connection)
+2.  connect via Mobaxterm or putty (for a remote connection)
 
 
 # Install Jenkins
 
-1- git clone https://github.com/franck-art/install-jenkins_via_ansible.git
+1.  git clone https://github.com/franck-art/install-jenkins_via_ansible.git
 
-2- cd install-jenkins_via_ansible
+2.  cd install-jenkins_via_ansible
 
-3- ansible-galaxy role install -r requirements.yml
+3.  ansible-galaxy role install -r requirements.yml
 
-4- ansible-playbook install_jenkins.yml 
+4.  ansible-playbook install_jenkins.yml 
 
-5- connect to a browser: http://@ip:8080/
+5.  connect to a browser: http://@ip:8080/
+
+6. sudo echo 'jenkins ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
